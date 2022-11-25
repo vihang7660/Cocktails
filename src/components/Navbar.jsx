@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -10,10 +11,10 @@ export default function Navbar() {
         </a>
         <ul className="nav-links">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/">About</a>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </div>

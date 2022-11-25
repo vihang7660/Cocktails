@@ -21,7 +21,7 @@ export function useContextState() {
 
 function reducer(state, action) {
   if (action.type === "fetching") {
-    return { ...state, cocktail: action.data, fixedMenu: action.data };
+    return { ...state, cocktail: action.data };
   } else if (action.type === "modifying_input_text") {
     return { ...state, searchText: action.text };
   } /* else if (action.type === "filtering_cocktails") {
@@ -31,13 +31,17 @@ function reducer(state, action) {
         drink.strDrink.toLowerCase().includes(state.searchText.toLowerCase())
       ),
     };
-  } */
+  } */ else if (action.type === "emptying") {
+    return { ...state, cocktail: [] };
+  } else if (action.type === "addingId") {
+    return { ...state, currentId: action.id };
+  }
 }
 
 const initialState = {
   cocktail: [],
-  searchText: "a",
-  fixedMenu: [],
+  searchText: "",
+  currentId: "",
 };
 
 let exampletState = {

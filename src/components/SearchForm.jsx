@@ -10,6 +10,7 @@ export default function SearchForm() {
         <div className="form-control">
           <label htmlFor="name">Search Your Favorite Cocktail</label>
           <input
+            autoFocus={true}
             value={state.searchText}
             type="text"
             name="name"

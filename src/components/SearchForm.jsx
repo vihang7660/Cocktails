@@ -4,15 +4,9 @@ import { useContextState } from "../context";
 export default function SearchForm() {
   const { state, dispatch } = useContextState();
 
-  /* React.useEffect(() => {
-    dispatch({
-      type: "filtering_cocktails",
-    });
-  }, [state.searchText]); */
-
   return (
     <section className="section search">
-      <form action="#" className="search-form">
+      <form className="search-form" onSubmit={(e) => e.preventDefault()}>
         <div className="form-control">
           <label htmlFor="name">Search Your Favorite Cocktail</label>
           <input

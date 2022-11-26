@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import SearchForm from "../components/SearchForm";
 import CocktailList from "../components/CocktailList";
 
